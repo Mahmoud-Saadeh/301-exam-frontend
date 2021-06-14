@@ -1,17 +1,20 @@
 import React from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import FavoriteDigimons from './components/FavoriteDigimons';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 class App extends React.Component {
   render() {
     return (
       <>
+        <Header />
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
-              <h1>HOME</h1>
+              <Main />
             </Route>
-            <Route exact path="/favorite">
-              <h1>2</h1>
+            <Route exact path="/mydigimons">
+              <FavoriteDigimons />
             </Route>
           </Switch>
         </BrowserRouter>
@@ -19,5 +22,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
